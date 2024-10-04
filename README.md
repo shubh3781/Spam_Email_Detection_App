@@ -1,5 +1,4 @@
 
----
 
 # Spam_Email_Detection_App
 
@@ -22,6 +21,12 @@ You can install these dependencies by running:
 ```bash
 pip install -r requirements.txt
 ```
+
+### Important:
+The following are **updated** dependencies:
+- `Flask==3.0.3`
+- `nltk==3.6.6`
+- `scikit-learn==1.5.1`
 
 ## How to Run Locally
 
@@ -46,7 +51,7 @@ pip install -r requirements.txt
     http://localhost:5000
     ```
 
-### Important: 
+### Important:
 If you're running this app on a local machine, ensure you modify the following line in `app.py`:
 
 ```python
@@ -58,6 +63,30 @@ app.run(debug=True)
 ```
 
 This change is necessary to avoid issues with reloading the app when making changes locally.
+
+### Common Issue: NLTK `punkt` Resource Error
+
+If you encounter the following error when running the app:
+
+```
+LookupError: 
+**********************************************************************
+  Resource punkt not found.
+  Please use the NLTK Downloader to obtain the resource:
+  >>> import nltk
+  >>> nltk.download('punkt')
+**********************************************************************
+```
+
+Follow these steps to resolve it:
+
+1. Open a Python terminal and run the following commands:
+    ```python
+    import nltk
+    nltk.download('punkt')
+    ```
+
+2. This will download the required resource and resolve the error.
 
 ## How to Deploy on AWS EC2
 
