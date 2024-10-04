@@ -14,9 +14,9 @@ This repository contains a simple Flask-based web application to classify emails
 
 Make sure you have the following installed:
 - Python 3.x
-- Flask 2.0.1
-- NLTK 3.6.3
-- Scikit-learn 0.24.2
+- Flask 3.0.3
+- NLTK 3.6.6
+- Scikit-learn 1.5.1
 
 You can install these dependencies by running:
 ```bash
